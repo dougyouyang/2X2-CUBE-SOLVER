@@ -47,11 +47,15 @@ void toside(long long c)
 void print(string s)
 {
     int i;
-    for(i=0;i<=s.length()-3;i++)
+    for(i=0;i<=s.length()-4;i++)
         if(s[i]==s[i+1] && s[i+1]==s[i+2])
             cout << char(s[i]-'A'+'a'), i+=2;
         else
             cout << s[i];
+    if(s[i]==s[i+1] && s[i+1]==s[i+2])
+        cout << char(s[i]-'A'+'a');
+    else
+        cout << s[i] << s[i+1] << s[i+2];
     cout << endl;
 }
 
